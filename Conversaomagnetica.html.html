@@ -1,0 +1,285 @@
+<style>
+:root{--bg:#0e0c0a;--card:#1a1612;--border:#2a2218;--accent:#c9a96e;--accent2:#e8c98a;--text:#e8e0d4;--muted:#7a6e62;--green:#6db89a;--red:#c97070;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+.hero{text-align:center;padding:80px 24px 60px;background:radial-gradient(ellipse 80% 40% at 50% 0%,#c9a96e18 0%,transparent 60%);}
+.hero-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:block;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,64px);font-weight:300;line-height:1.1;color:var(--text);margin-bottom:16px;}
+.hero h1 em{font-style:italic;color:var(--accent);}
+.hero-sub{font-size:15px;color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.7;}
+.cta-btn{display:inline-block;background:var(--accent);color:#0e0c0a;font-size:14px;font-weight:600;padding:16px 40px;border-radius:4px;text-decoration:none;transition:all 0.3s;}
+.cta-btn:hover{background:var(--accent2);}
+.badges{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:28px;}
+.badge{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px;}
+.badge b{color:var(--accent);}
+section{padding:64px 24px;max-width:860px;margin:0 auto;}
+.slabel{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:block;}
+.stitle{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,40px);font-weight:300;color:var(--text);line-height:1.2;margin-bottom:8px;}
+.stitle em{font-style:italic;color:var(--accent);}
+.ssub{color:var(--muted);font-size:14px;margin-bottom:40px;max-width:560px;}
+.divhr{border:none;border-top:1px solid var(--border);margin:0 0 40px;}
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px;}
+.pain-item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px 18px;display:flex;gap:10px;align-items:flex-start;}
+.px{color:var(--red);font-size:15px;font-weight:700;flex-shrink:0;}
+.pt{font-size:13px;color:var(--muted);line-height:1.6;}
+.hbox{background:linear-gradient(135deg,#c9a96e12,#c9a96e06);border:1px solid #c9a96e30;border-radius:10px;padding:24px 28px;text-align:center;}
+.hbox p{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);line-height:1.5;}
+.hbox p em{font-style:italic;color:var(--accent);}
+.protocolo-card{background:var(--card);border:1px solid #c9a96e40;border-radius:16px;padding:44px 40px;position:relative;overflow:hidden;margin-bottom:16px;}
+.protocolo-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);}
+.protocolo-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block;}
+.protocolo-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,42px);font-weight:300;color:var(--text);line-height:1.2;margin-bottom:16px;}
+.protocolo-title em{font-style:italic;color:var(--accent);}
+.protocolo-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px;max-width:580px;}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:24px;}
+.pill{background:#c9a96e18;border:1px solid #c9a96e30;color:var(--accent);font-size:11px;font-weight:500;padding:5px 14px;border-radius:20px;}
+.protocolo-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.pf{display:flex;gap:10px;align-items:flex-start;}
+.pf-icon{font-size:16px;flex-shrink:0;margin-top:2px;}
+.pf-text{font-size:13px;color:var(--muted);line-height:1.5;}
+.pf-text strong{color:var(--text);display:block;font-size:13px;margin-bottom:2px;}
+.bonus-section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px 36px;position:relative;overflow:hidden;}
+.bonus-section::after{content:'BÔNUS';position:absolute;top:14px;right:-18px;background:var(--green);color:#0e0c0a;font-size:9px;font-weight:700;letter-spacing:2px;padding:4px 26px;transform:rotate(15deg);}
+.bonus-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:8px;}
+.bonus-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6;}
+.aulas{display:flex;flex-direction:column;gap:8px;}
+.aula{display:flex;gap:14px;align-items:center;padding:12px 16px;background:#0e0c0a;border:1px solid var(--border);border-radius:8px;}
+.aula-num{width:32px;height:32px;border-radius:50%;background:#c9a96e18;border:1px solid #c9a96e30;color:var(--accent);font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:500;flex-shrink:0;}
+.aula-info{flex:1;}
+.aula-title{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px;}
+.aula-desc{font-size:11px;color:var(--muted);}
+.checklist{display:flex;flex-direction:column;gap:8px;}
+.ci{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--text);}
+.ck{color:var(--green);font-size:15px;font-weight:700;flex-shrink:0;}
+.about-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:36px;display:grid;grid-template-columns:1fr 180px;gap:36px;align-items:center;}
+.aname{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--text);margin-bottom:5px;}
+.atitle{font-size:12px;color:var(--accent);margin-bottom:14px;letter-spacing:0.5px;}
+.atext{font-size:13px;color:var(--muted);line-height:1.7;}
+.stats{display:flex;flex-direction:column;gap:12px;}
+.sbox{background:#c9a96e12;border:1px solid #c9a96e25;border-radius:8px;padding:12px;text-align:center;}
+.snum{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--accent);font-weight:400;line-height:1;margin-bottom:3px;}
+.slb{font-size:10px;color:var(--muted);line-height:1.4;}
+.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.for-col h3{font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.for-col.yes h3{color:var(--green);}
+.for-col.no h3{color:var(--red);}
+.fi{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;font-size:13px;color:var(--muted);line-height:1.6;}
+.fi .icon{flex-shrink:0;margin-top:2px;font-size:13px;}
+.for-col.yes .icon{color:var(--green);}
+.for-col.no .icon{color:var(--red);}
+.faq{display:flex;flex-direction:column;gap:4px;}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.faq-q{padding:16px 20px;font-size:13px;font-weight:500;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+.faq-q:hover{color:var(--accent);}
+.faq-icon{color:var(--accent);font-size:18px;transition:transform 0.3s;}
+.faq-a{padding:0 20px;font-size:13px;color:var(--muted);line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s;}
+.faq-item.open .faq-a{max-height:300px;padding:0 20px 16px;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.urgency{background:linear-gradient(135deg,#c9a96e12,#c9a96e06);border:1px solid #c9a96e30;border-radius:12px;padding:28px 32px;text-align:center;margin-bottom:36px;}
+.urgency p:first-child{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,3vw,26px);font-weight:400;color:var(--text);line-height:1.4;margin-bottom:10px;}
+.urgency p:last-child{font-size:14px;color:var(--muted);line-height:1.6;}
+.price-card{background:var(--card);border:1px solid #c9a96e40;border-radius:16px;padding:44px 40px;max-width:480px;margin:0 auto;position:relative;overflow:hidden;text-align:center;}
+.price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);}
+.pname{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:5px;}
+.pdesc{font-size:12px;color:var(--muted);margin-bottom:28px;}
+.pval{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:5px;}
+.pparc{font-size:12px;color:var(--muted);margin-bottom:32px;}
+.pcta{display:block;background:var(--accent);color:#0e0c0a;font-size:14px;font-weight:600;padding:16px;border-radius:6px;text-decoration:none;text-align:center;transition:all 0.3s;margin-bottom:14px;}
+.pcta:hover{background:var(--accent2);}
+.plock{font-size:11px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:5px;}
+.gcard{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px 32px;display:flex;gap:20px;align-items:flex-start;max-width:480px;margin:20px auto 0;}
+.gicon{font-size:36px;flex-shrink:0;}
+.gtitle{font-size:15px;font-weight:600;color:var(--text);margin-bottom:5px;}
+.gtext{font-size:12px;color:var(--muted);line-height:1.65;}
+.final{text-align:center;padding:80px 24px;border-top:1px solid var(--border);}
+.final h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,44px);font-weight:300;color:var(--text);margin-bottom:14px;line-height:1.2;}
+.final h2 em{font-style:italic;color:var(--accent);}
+.final p{color:var(--muted);font-size:14px;margin-bottom:32px;}
+footer{border-top:1px solid var(--border);padding:28px 24px;text-align:center;font-size:11px;color:var(--muted);}
+@media(max-width:600px){.pain-grid{grid-template-columns:1fr}.protocolo-features{grid-template-columns:1fr}.about-card{grid-template-columns:1fr}.stats{flex-direction:row;flex-wrap:wrap}.sbox{flex:1;min-width:100px}.for-grid{grid-template-columns:1fr}.protocolo-card{padding:28px 24px}}
+</style>
+
+<div class="hero">
+  <span class="hero-label">Keidi Masera · Para psicólogas</span>
+  <h1>Conversão Magnética™</h1>
+  <p class="hero-sub">Sistema estruturado de comunicação que transforma interesse em pacientes que iniciam o processo psicoterapêutico.</p>
+  <a href="#preco" class="cta-btn">Quero o Conversão Magnética™</a>
+  <div class="badges">
+    <div class="badge"><b>◈</b> 9 scripts prontos</div>
+    <div class="badge"><b>✦</b> Editável para a sua realidade</div>
+    <div class="badge"><b>▶</b> 3 aulas de suporte incluso</div>
+    <div class="badge"><b>◇</b> Acesso imediato</div>
+  </div>
+</div>
+
+<section>
+  <span class="slabel">Você se identifica?</span>
+  <h2 class="stitle">O paciente chegou.<br><em>E foi embora.</em></h2>
+  <p class="ssub">Se qualquer um desses cenários parece familiar, o problema não é a sua competência. É a comunicação.</p>
+  <div class="divhr"></div>
+  <div class="pain-grid">
+    <div class="pain-item"><div class="px">✗</div><div class="pt">O paciente pareceu interessado e sumiu. Sem resposta. Sem explicação.</div></div>
+    <div class="pain-item"><div class="px">✗</div><div class="pt">Você passou o preço e ele disse "vou pensar". Nunca mais apareceu.</div></div>
+    <div class="pain-item"><div class="px">✗</div><div class="pt">Na hora de apresentar o seu trabalho, algo trava. Não sai com confiança.</div></div>
+    <div class="pain-item"><div class="px">✗</div><div class="pt">O paciente disse que está caro e você não soube o que responder.</div></div>
+    <div class="pain-item"><div class="px">✗</div><div class="pt">A conversa começou bem mas não soube o momento certo de apresentar o valor.</div></div>
+    <div class="pain-item"><div class="px">✗</div><div class="pt">Você sabe que é boa, mas na hora de converter algo não funciona.</div></div>
+  </div>
+  <div class="hbox"><p>Comunicação <em>se aprende.</em><br>E existe um protocolo para isso.</p></div>
+</section>
+
+<section>
+  <span class="slabel">O produto</span>
+  <h2 class="stitle">9 scripts prontos.<br><em>Do primeiro contato à adesão terapêutica.</em></h2>
+  <p class="ssub">O Protocolo de Conversão Magnética é um sistema editável com roteiros prontos para cada etapa da conversa clínica.</p>
+  <div class="divhr"></div>
+  <div class="protocolo-card">
+    <span class="protocolo-label">Protocolo de Conversão Magnética™ · Produto principal</span>
+    <div class="protocolo-title">9 scripts que conduzem<br>o paciente do <em>primeiro contato</em><br>ao compromisso terapêutico.</div>
+    <div class="protocolo-desc">Cada script foi desenvolvido com gatilhos de persuasão ética, testados em mais de 7.000 atendimentos. Você personaliza com os seus dados e usa nas suas conversas do WhatsApp hoje mesmo.</div>
+    <div class="pills">
+      <span class="pill">1. Acolhimento</span>
+      <span class="pill">2. Escuta da Dor</span>
+      <span class="pill">3. Autoridade</span>
+      <span class="pill">4. Investimento</span>
+      <span class="pill">5. Objeções</span>
+      <span class="pill">6. Agendamento</span>
+      <span class="pill">7. 1ª Sessão</span>
+      <span class="pill">8. Retenção</span>
+      <span class="pill">9. Follow-up</span>
+    </div>
+    <div class="protocolo-features">
+      <div class="pf"><div class="pf-icon">✏️</div><div class="pf-text"><strong>100% editável</strong>Personalize com sua especialidade, abordagem e valores de sessão.</div></div>
+      <div class="pf"><div class="pf-icon">📋</div><div class="pf-text"><strong>Copiar com 1 clique</strong>Cada script tem botão de cópia direta para o WhatsApp.</div></div>
+      <div class="pf"><div class="pf-icon">🧠</div><div class="pf-text"><strong>Gatilhos explicados</strong>Cada mensagem vem com a lógica por trás de cada palavra.</div></div>
+      <div class="pf"><div class="pf-icon">⚡</div><div class="pf-text"><strong>Uso imediato</strong>Abra, personalize e use na próxima conversa.</div></div>
+    </div>
+  </div>
+  <div class="bonus-section">
+    <div class="bonus-title">3 aulas de suporte</div>
+    <div class="bonus-sub">Para você entender a lógica por trás de cada etapa e personalizar o protocolo com confiança.</div>
+    <div class="aulas">
+      <div class="aula"><div class="aula-num">1</div><div class="aula-info"><div class="aula-title">Boas-vindas ao Conversão Magnética™</div><div class="aula-desc">O que é o protocolo, como ele foi desenvolvido e o que você vai conquistar com ele.</div></div></div>
+      <div class="aula"><div class="aula-num">2</div><div class="aula-info"><div class="aula-title">Como usar o protocolo no dia a dia</div><div class="aula-desc">Sequência obrigatória, quando usar cada script e como adaptar ao ritmo da conversa.</div></div></div>
+      <div class="aula"><div class="aula-num">3</div><div class="aula-info"><div class="aula-title">Como personalizar os scripts</div><div class="aula-desc">Passo a passo para preencher cada campo, adaptar o tom e fazer o protocolo soar como você.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="slabel">Tudo que você leva</span>
+  <h2 class="stitle">Sem rodeios.</h2>
+  <div class="divhr"></div>
+  <div class="checklist">
+    <div class="ci"><div class="ck">✓</div>Protocolo de Conversão Magnética™ com 9 scripts prontos e editáveis</div>
+    <div class="ci"><div class="ck">✓</div>11 respostas para as objeções mais comuns com a lógica de cada uma</div>
+    <div class="ci"><div class="ck">✓</div>Botão de cópia direta em cada script para usar no WhatsApp</div>
+    <div class="ci"><div class="ck">✓</div>Gatilhos de persuasão explicados em cada mensagem</div>
+    <div class="ci"><div class="ck">✓</div>3 aulas de suporte: boas-vindas, como usar e como personalizar</div>
+    <div class="ci"><div class="ck">✓</div>Acesso vitalício ao material e às suas atualizações</div>
+  </div>
+</section>
+
+<section>
+  <span class="slabel">Quem criou esse método</span>
+  <h2 class="stitle">Keidi Masera.<br><em>Testado em +7.000 atendimentos.</em></h2>
+  <div class="divhr"></div>
+  <div class="about-card">
+    <div>
+      <div class="aname">Keidi Masera</div>
+      <div class="atitle">Psicóloga · TCC · Psicologia Organizacional · Neurociências · Criadora do Método Ancorah</div>
+      <div class="atext">
+        Psicóloga especialista em Terapia Cognitivo-Comportamental, Psicologia Organizacional e Neurociências. Com sólida expertise de mais de 13 anos, com mais de 7.000 sessões psicoterapêuticas realizadas para mais de 3.000 pacientes.
+        <br><br>
+        Atuação clínica especializada em ansiedade. Mentora e criadora do <strong style="color:var(--accent)">Método Ancorah</strong>, desenvolvido com base na prática clínica.
+        <br><br>
+        Por muito tempo teve dificuldade em atrair e reter potenciais pacientes. Após um período dedicado ao estudo sobre como encantar e converter novos clientes, desenvolveu e testou o Protocolo de Conversão Magnética.
+        <br><br>
+        <em style="color:var(--accent)">Ela viveu o problema que esse método resolve. É exatamente por isso que ele funciona.</em>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="sbox"><div class="snum">+7k</div><div class="slb">sessões psicoterapêuticas</div></div>
+      <div class="sbox"><div class="snum">+3k</div><div class="slb">pacientes atendidos</div></div>
+      <div class="sbox"><div class="snum">13+</div><div class="slb">anos de expertise</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="slabel">Fit</span>
+  <h2 class="stitle">Esse protocolo<br><em>é para você?</em></h2>
+  <div class="divhr"></div>
+  <div class="for-grid">
+    <div class="for-col yes">
+      <h3>Para quem é</h3>
+      <div class="fi"><span class="icon">✓</span><span>Psicólogas que querem converter mais pacientes nas primeiras mensagens</span></div>
+      <div class="fi"><span class="icon">✓</span><span>Quem sente insegurança na hora de apresentar os seus diferenciais e o seu valor</span></div>
+      <div class="fi"><span class="icon">✓</span><span>Quem já perdeu pacientes no meio da conversa sem entender por quê</span></div>
+      <div class="fi"><span class="icon">✓</span><span>Quem quer um roteiro estruturado do primeiro contato ao encerramento</span></div>
+      <div class="fi"><span class="icon">✓</span><span>Quem quer atrair e encantar mais pacientes sem parecer vendedor</span></div>
+    </div>
+    <div class="for-col no">
+      <h3>Para quem não é</h3>
+      <div class="fi"><span class="icon">✗</span><span>Quem acha que basta ser boa para o paciente chegar</span></div>
+      <div class="fi"><span class="icon">✗</span><span>Quem não quer assumir responsabilidade pela própria conversão</span></div>
+      <div class="fi"><span class="icon">✗</span><span>Quem está esperando o momento certo para começar</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="slabel">Dúvidas frequentes</span>
+  <h2 class="stitle">Perguntas<br><em>e respostas.</em></h2>
+  <div class="divhr"></div>
+  <div class="faq">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">O Conversão Magnética™ é exclusivo para psicólogas? <span class="faq-icon">+</span></div><div class="faq-a">Sim. A estrutura do protocolo foi desenvolvida especificamente para a psicologia clínica. A linguagem, os gatilhos e a sequência de etapas foram pensados para o contexto do atendimento psicológico.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Funciona para qualquer abordagem psicoterapêutica? <span class="faq-icon">+</span></div><div class="faq-a">Sim. O protocolo é compatível com qualquer abordagem: TCC, Psicanálise, Humanista, EMDR, Sistêmica e outras. A estrutura foi desenvolvida dentro da TCC, mas os scripts são adaptáveis para que o protocolo reflita quem você é como profissional.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Consigo usar no mesmo dia que receber? <span class="faq-icon">+</span></div><div class="faq-a">Sim. Assista as 3 aulas de suporte, abra o protocolo, preencha os seus dados e use na próxima conversa. São menos de 30 minutos de configuração.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Posso usar os scripts exatamente como estão? <span class="faq-icon">+</span></div><div class="faq-a">Sim, mas antes você precisará adaptar o material à sua realidade clínica: preencher os seus valores de sessão, os seus diferenciais e os dados da sua atuação. O tom das mensagens precisa estar alinhado ao seu perfil como profissional. O protocolo é a estrutura. A sua voz é o que o torna único.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Tem garantia? <span class="faq-icon">+</span></div><div class="faq-a">Sim. 7 dias de garantia completa. Se sentir que o conteúdo não é o que esperava, devolvo 100% do valor. Sem perguntas. Sem burocracia.</div></div>
+  </div>
+</section>
+
+<section id="preco" style="text-align:center">
+  <span class="slabel" style="display:block;text-align:center">Investimento</span>
+  <h2 class="stitle" style="text-align:center">Pronto para<br><em>começar?</em></h2>
+  <div class="divhr"></div>
+  <div class="urgency">
+    <p>Cada semana sem protocolo é uma semana de pacientes perdidos.</p>
+    <p>Não porque você não é boa. Porque você ainda não tem as ferramentas certas. <strong style="color:var(--accent)">Isso muda agora.</strong></p>
+  </div>
+  <div class="price-card">
+    <div class="pname">Conversão Magnética™</div>
+    <div class="pdesc">Protocolo editável completo + 3 aulas de suporte</div>
+    <div class="pval">R$ 97</div>
+    <div class="pparc">ou em até 12x no cartão</div>
+    <a href="#" class="pcta">Quero acesso agora</a>
+    <div class="plock">🔒 Pagamento seguro · Acesso imediato</div>
+  </div>
+  <div class="gcard">
+    <div class="gicon">🛡️</div>
+    <div>
+      <div class="gtitle">Garantia de 7 dias</div>
+      <div class="gtext">Se sentir que o conteúdo não é o que esperava, devolvo 100% do valor. Sem perguntas. Sem burocracia. Porque eu confio no que entreguei.</div>
+    </div>
+  </div>
+</section>
+
+<div class="final">
+  <h2>Conversão Magnética™<br><em>Do primeiro contato à adesão terapêutica.</em></h2>
+  <p>Scripts prontos. Gatilhos explicados. Uso imediato.</p>
+  <a href="#preco" class="cta-btn">Quero o Conversão Magnética™</a>
+</div>
+
+<footer>
+  <p>Conversão Magnética™ · Keidi Masera</p>
+  <p style="margin-top:6px">© 2026 · Todos os direitos reservados</p>
+</footer>
+
+<script>
+function toggleFaq(el){el.parentElement.classList.toggle('open');}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='translateY(0)';}});},{threshold:0.1});
+document.querySelectorAll('.pain-item,.ci,.faq-item').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.5s ease,transform 0.5s ease';obs.observe(el);});
+</script>
